@@ -3,58 +3,41 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>George Varughese — Portfolio</title>
+<title>George Varughese — Intern (IT) · McDermott International</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"/>
 <style>
   :root {
     --navy: #0A1628;
-    --teal: #12737B;
-    --teal-light: #1A9CA6;
+    --blue: #1B5FA8;
+    --blue-light: #2E7DD4;
     --gold: #C8952A;
     --cream: #F5F0E8;
-    --fog: #E8EDF5;
+    --fog: #EEF3FA;
     --text: #1C2B3A;
     --muted: #667799;
     --white: #FFFFFF;
     --card-bg: #FFFFFF;
-    --border: rgba(18,115,123,0.15);
+    --border: rgba(27,95,168,0.15);
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
   html { scroll-behavior: smooth; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--cream); color: var(--text); overflow-x: hidden; }
 
-  body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--cream);
-    color: var(--text);
-    overflow-x: hidden;
-  }
-
-  /* ── NAV ── */
   nav {
     position: fixed; top: 0; left: 0; right: 0; z-index: 100;
     display: flex; justify-content: space-between; align-items: center;
     padding: 16px 48px;
-    background: rgba(10,22,40,0.92);
+    background: rgba(10,22,40,0.93);
     backdrop-filter: blur(12px);
-    border-bottom: 1px solid rgba(18,115,123,0.3);
+    border-bottom: 1px solid rgba(27,95,168,0.3);
   }
-  .nav-logo {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.1rem;
-    color: var(--cream);
-    letter-spacing: 0.04em;
-  }
-  .nav-logo span { color: var(--teal-light); }
+  .nav-logo { font-family: 'DM Serif Display', serif; font-size: 1.1rem; color: var(--cream); letter-spacing: 0.04em; }
+  .nav-logo span { color: #5BA3E8; }
   .nav-links { display: flex; gap: 32px; list-style: none; }
-  .nav-links a {
-    font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
-    color: rgba(245,240,232,0.65); text-decoration: none; transition: color 0.2s;
-  }
-  .nav-links a:hover { color: var(--teal-light); }
+  .nav-links a { font-size: 0.82rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(245,240,232,0.65); text-decoration: none; transition: color 0.2s; }
+  .nav-links a:hover { color: #5BA3E8; }
 
-  /* ── HERO ── */
   #hero {
     min-height: 100vh;
     background: var(--navy);
@@ -68,349 +51,176 @@
   .hero-bg-grid {
     position: absolute; inset: 0;
     background-image:
-      linear-gradient(rgba(18,115,123,0.07) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(18,115,123,0.07) 1px, transparent 1px);
+      linear-gradient(rgba(27,95,168,0.07) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(27,95,168,0.07) 1px, transparent 1px);
     background-size: 48px 48px;
   }
   .hero-bg-glow {
     position: absolute;
     width: 600px; height: 600px;
-    background: radial-gradient(circle, rgba(18,115,123,0.2) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(27,95,168,0.22) 0%, transparent 70%);
     right: -100px; top: 50%; transform: translateY(-50%);
     pointer-events: none;
   }
   .hero-left { position: relative; z-index: 2; }
   .hero-tag {
     display: inline-flex; align-items: center; gap: 8px;
-    background: rgba(18,115,123,0.15);
-    border: 1px solid rgba(18,115,123,0.4);
+    background: rgba(27,95,168,0.15);
+    border: 1px solid rgba(27,95,168,0.4);
     border-radius: 100px;
     padding: 6px 16px;
     font-size: 0.75rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--teal-light);
+    color: #5BA3E8;
     margin-bottom: 24px;
     animation: fadeUp 0.6s ease both;
   }
-  .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: var(--teal-light); animation: pulse 2s infinite; }
+  .hero-tag::before { content: ''; width: 6px; height: 6px; border-radius: 50%; background: #5BA3E8; animation: pulse 2s infinite; }
   @keyframes pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:0.4;transform:scale(1.3)} }
 
-  .hero-name {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(3rem, 5vw, 4.8rem);
-    line-height: 1.05;
-    color: var(--white);
-    margin-bottom: 16px;
-    animation: fadeUp 0.6s 0.1s ease both;
-  }
-  .hero-name em { color: var(--teal-light); font-style: italic; }
+  .hero-name { font-family: 'DM Serif Display', serif; font-size: clamp(3rem, 5vw, 4.8rem); line-height: 1.05; color: var(--white); margin-bottom: 16px; animation: fadeUp 0.6s 0.1s ease both; }
+  .hero-name em { color: #5BA3E8; font-style: italic; }
+  .hero-role { font-size: 1rem; font-weight: 300; letter-spacing: 0.06em; color: rgba(245,240,232,0.6); margin-bottom: 28px; animation: fadeUp 0.6s 0.2s ease both; }
+  .hero-desc { font-size: 1.05rem; line-height: 1.75; color: rgba(245,240,232,0.75); max-width: 500px; margin-bottom: 40px; animation: fadeUp 0.6s 0.3s ease both; }
+  .hero-cta { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeUp 0.6s 0.4s ease both; }
 
-  .hero-role {
-    font-size: 1rem; font-weight: 300; letter-spacing: 0.06em;
-    color: rgba(245,240,232,0.6);
-    margin-bottom: 28px;
-    animation: fadeUp 0.6s 0.2s ease both;
-  }
-  .hero-desc {
-    font-size: 1.05rem; line-height: 1.75;
-    color: rgba(245,240,232,0.75);
-    max-width: 500px;
-    margin-bottom: 40px;
-    animation: fadeUp 0.6s 0.3s ease both;
-  }
-  .hero-cta {
-    display: flex; gap: 16px; flex-wrap: wrap;
-    animation: fadeUp 0.6s 0.4s ease both;
-  }
-  .btn-primary {
-    padding: 13px 30px;
-    background: var(--teal);
-    color: var(--white);
-    border: none; border-radius: 6px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em;
-    cursor: pointer; text-decoration: none;
-    transition: background 0.2s, transform 0.15s;
-  }
-  .btn-primary:hover { background: var(--teal-light); transform: translateY(-1px); }
-  .btn-ghost {
-    padding: 13px 30px;
-    background: transparent;
-    color: rgba(245,240,232,0.8);
-    border: 1px solid rgba(245,240,232,0.25);
-    border-radius: 6px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem; font-weight: 500;
-    cursor: pointer; text-decoration: none;
-    transition: border-color 0.2s, color 0.2s;
-  }
-  .btn-ghost:hover { border-color: var(--teal-light); color: var(--teal-light); }
+  .btn-primary { padding: 13px 30px; background: var(--blue); color: var(--white); border: none; border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 600; letter-spacing: 0.04em; cursor: pointer; text-decoration: none; transition: background 0.2s, transform 0.15s; }
+  .btn-primary:hover { background: var(--blue-light); transform: translateY(-1px); }
+  .btn-ghost { padding: 13px 30px; background: transparent; color: rgba(245,240,232,0.8); border: 1px solid rgba(245,240,232,0.25); border-radius: 6px; font-family: 'DM Sans', sans-serif; font-size: 0.9rem; font-weight: 500; cursor: pointer; text-decoration: none; transition: border-color 0.2s, color 0.2s; }
+  .btn-ghost:hover { border-color: #5BA3E8; color: #5BA3E8; }
 
-  .hero-right {
-    position: relative; z-index: 2;
-    display: flex; flex-direction: column; gap: 16px; align-items: flex-end;
-    animation: fadeUp 0.6s 0.35s ease both;
-  }
-  .stat-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(18,115,123,0.25);
-    border-radius: 12px;
-    padding: 20px 28px;
-    min-width: 240px;
-    backdrop-filter: blur(8px);
-  }
-  .stat-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.4rem; color: var(--teal-light);
-    line-height: 1;
-  }
+  .hero-right { position: relative; z-index: 2; display: flex; flex-direction: column; gap: 16px; align-items: flex-end; animation: fadeUp 0.6s 0.35s ease both; }
+  .stat-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(27,95,168,0.25); border-radius: 12px; padding: 20px 28px; min-width: 240px; backdrop-filter: blur(8px); }
+  .stat-num { font-family: 'DM Serif Display', serif; font-size: 2.4rem; color: #5BA3E8; line-height: 1; }
   .stat-label { font-size: 0.8rem; color: rgba(245,240,232,0.5); margin-top: 4px; letter-spacing: 0.05em; }
 
-  .lang-bar {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(18,115,123,0.25);
-    border-radius: 12px;
-    padding: 16px 24px;
-    min-width: 240px;
-  }
+  .lang-bar { background: rgba(255,255,255,0.04); border: 1px solid rgba(27,95,168,0.25); border-radius: 12px; padding: 16px 24px; min-width: 240px; }
   .lang-bar-title { font-size: 0.7rem; color: rgba(245,240,232,0.4); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 12px; }
   .lang-item { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
   .lang-item:last-child { margin-bottom: 0; }
   .lang-name { font-size: 0.82rem; color: rgba(245,240,232,0.75); }
   .lang-dots { display: flex; gap: 4px; }
-  .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(18,115,123,0.25); }
-  .dot.active { background: var(--teal-light); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: rgba(27,95,168,0.25); }
+  .dot.active { background: #5BA3E8; }
 
   @keyframes fadeUp { from { opacity:0; transform:translateY(20px); } to { opacity:1; transform:translateY(0); } }
 
-  /* ── SECTIONS ── */
   section { padding: 96px 48px; }
-  .section-label {
-    font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase;
-    color: var(--teal); margin-bottom: 8px;
-  }
-  .section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: clamp(2rem, 3vw, 2.8rem);
-    color: var(--navy);
-    line-height: 1.15;
-    margin-bottom: 16px;
-  }
+  .section-label { font-size: 0.7rem; font-weight: 600; letter-spacing: 0.2em; text-transform: uppercase; color: var(--blue); margin-bottom: 8px; }
+  .section-title { font-family: 'DM Serif Display', serif; font-size: clamp(2rem, 3vw, 2.8rem); color: var(--navy); line-height: 1.15; margin-bottom: 16px; }
   .section-sub { font-size: 1rem; color: var(--muted); max-width: 520px; line-height: 1.7; margin-bottom: 56px; }
 
-  /* ── ABOUT ── */
   #about { background: var(--white); }
   .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
   .about-text p { font-size: 1rem; line-height: 1.8; color: #334155; margin-bottom: 20px; }
   .about-text p:last-child { margin-bottom: 0; }
   .about-text strong { color: var(--navy); font-weight: 600; }
   .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
-  .skill-chip {
-    background: var(--fog);
-    border-radius: 8px;
-    padding: 10px 14px;
-    font-size: 0.82rem; font-weight: 500;
-    color: var(--navy);
-    border: 1px solid transparent;
-    transition: border-color 0.2s, background 0.2s;
-    cursor: default;
-    display: flex; align-items: center; gap: 8px;
-  }
-  .skill-chip:hover { border-color: var(--teal); background: rgba(18,115,123,0.05); }
-  .skill-chip .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--teal); flex-shrink: 0; }
+  .skill-chip { background: var(--fog); border-radius: 8px; padding: 10px 14px; font-size: 0.82rem; font-weight: 500; color: var(--navy); border: 1px solid transparent; transition: border-color 0.2s, background 0.2s; cursor: default; display: flex; align-items: center; gap: 8px; }
+  .skill-chip:hover { border-color: var(--blue); background: rgba(27,95,168,0.05); }
+  .skill-chip .chip-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--blue); flex-shrink: 0; }
 
-  /* ── EXPERIENCE TIMELINE ── */
   #experience { background: var(--cream); }
   .timeline { position: relative; padding-left: 40px; }
-  .timeline::before {
-    content: '';
-    position: absolute; left: 12px; top: 8px; bottom: 8px; width: 2px;
-    background: linear-gradient(to bottom, var(--teal), var(--teal-light), rgba(18,115,123,0.1));
-  }
-  .tl-item {
-    position: relative;
-    margin-bottom: 48px;
-    opacity: 0;
-    transform: translateX(-12px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
+  .timeline::before { content: ''; position: absolute; left: 12px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(to bottom, var(--blue), var(--blue-light), rgba(27,95,168,0.1)); }
+  .tl-item { position: relative; margin-bottom: 48px; opacity: 0; transform: translateX(-12px); transition: opacity 0.5s ease, transform 0.5s ease; }
   .tl-item.visible { opacity: 1; transform: translateX(0); }
-  .tl-dot {
-    position: absolute; left: -34px; top: 6px;
-    width: 14px; height: 14px;
-    border-radius: 50%;
-    background: var(--white);
-    border: 2.5px solid var(--teal);
-    box-shadow: 0 0 0 3px rgba(18,115,123,0.12);
-  }
-  .tl-dot.current { background: var(--teal-light); border-color: var(--teal-light); }
-  .tl-card {
-    background: var(--white);
-    border-radius: 14px;
-    padding: 28px 32px;
-    border: 1px solid var(--border);
-    box-shadow: 0 2px 16px rgba(10,22,40,0.06);
-    transition: box-shadow 0.2s, transform 0.2s;
-  }
+  .tl-dot { position: absolute; left: -34px; top: 6px; width: 14px; height: 14px; border-radius: 50%; background: var(--white); border: 2.5px solid var(--blue); box-shadow: 0 0 0 3px rgba(27,95,168,0.12); }
+  .tl-dot.current { background: var(--blue-light); border-color: var(--blue-light); }
+  .tl-card { background: var(--white); border-radius: 14px; padding: 28px 32px; border: 1px solid var(--border); box-shadow: 0 2px 16px rgba(10,22,40,0.06); transition: box-shadow 0.2s, transform 0.2s; }
   .tl-card:hover { box-shadow: 0 8px 32px rgba(10,22,40,0.1); transform: translateY(-2px); }
   .tl-meta { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 6px; flex-wrap: wrap; gap: 8px; }
   .tl-company { font-weight: 700; font-size: 1rem; color: var(--navy); }
-  .tl-date {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.75rem; color: var(--teal);
-    background: rgba(18,115,123,0.08);
-    padding: 3px 10px; border-radius: 4px;
-  }
+  .tl-date { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--blue); background: rgba(27,95,168,0.08); padding: 3px 10px; border-radius: 4px; }
   .tl-role { font-size: 0.85rem; color: var(--muted); margin-bottom: 14px; font-weight: 500; }
   .tl-bullets { list-style: none; }
-  .tl-bullets li {
-    font-size: 0.92rem; color: #334155; line-height: 1.65;
-    padding-left: 18px; position: relative; margin-bottom: 8px;
-  }
-  .tl-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--teal); font-size: 0.85rem; }
+  .tl-bullets li { font-size: 0.92rem; color: #334155; line-height: 1.65; padding-left: 18px; position: relative; margin-bottom: 8px; }
+  .tl-bullets li::before { content: '→'; position: absolute; left: 0; color: var(--blue); font-size: 0.85rem; }
   .tl-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-  .tag {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 0.7rem; padding: 3px 10px;
-    border-radius: 4px;
-    background: var(--fog);
-    color: var(--muted);
-    border: 1px solid transparent;
-  }
+  .tag { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; padding: 3px 10px; border-radius: 4px; background: var(--fog); color: var(--muted); border: 1px solid transparent; }
 
-  /* ── ACHIEVEMENTS ── */
   #achievements { background: var(--navy); }
   #achievements .section-title { color: var(--white); }
   #achievements .section-sub { color: rgba(245,240,232,0.6); }
-  #achievements .section-label { color: var(--teal-light); }
+  #achievements .section-label { color: #5BA3E8; }
   .achievements-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
-  .ach-card {
-    background: rgba(255,255,255,0.04);
-    border: 1px solid rgba(18,115,123,0.2);
-    border-radius: 14px;
-    padding: 32px 28px;
-    transition: border-color 0.2s, background 0.2s, transform 0.2s;
-    cursor: default;
-  }
-  .ach-card:hover { border-color: var(--teal-light); background: rgba(18,115,123,0.08); transform: translateY(-3px); }
+  .ach-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(27,95,168,0.2); border-radius: 14px; padding: 32px 28px; transition: border-color 0.2s, background 0.2s, transform 0.2s; cursor: default; }
+  .ach-card:hover { border-color: #5BA3E8; background: rgba(27,95,168,0.08); transform: translateY(-3px); }
   .ach-icon { font-size: 2rem; margin-bottom: 16px; }
-  .ach-num {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.8rem; color: var(--teal-light); line-height: 1;
-    margin-bottom: 6px;
-  }
+  .ach-num { font-family: 'DM Serif Display', serif; font-size: 2.8rem; color: #5BA3E8; line-height: 1; margin-bottom: 6px; }
   .ach-title { font-size: 0.95rem; font-weight: 600; color: var(--white); margin-bottom: 8px; }
   .ach-desc { font-size: 0.85rem; color: rgba(245,240,232,0.5); line-height: 1.6; }
 
-  /* ── SKILLS DEEP DIVE ── */
   #skills { background: var(--white); }
   .skills-tabs { display: flex; gap: 8px; margin-bottom: 40px; flex-wrap: wrap; }
-  .tab-btn {
-    padding: 9px 22px;
-    border: 1px solid var(--border);
-    background: transparent;
-    border-radius: 100px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.85rem; font-weight: 500;
-    color: var(--muted);
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .tab-btn.active { background: var(--navy); color: var(--white); border-color: var(--navy); }
-  .tab-btn:hover:not(.active) { border-color: var(--teal); color: var(--teal); }
+  .tab-btn { padding: 9px 22px; border: 1px solid var(--border); background: transparent; border-radius: 100px; font-family: 'DM Sans', sans-serif; font-size: 0.85rem; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.2s; }
+  .tab-btn.active { background: var(--blue); color: var(--white); border-color: var(--blue); }
+  .tab-btn:hover:not(.active) { border-color: var(--blue); color: var(--blue); }
   .skills-panel { display: none; }
-  .skills-panel.active { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 14px; }
-  .skill-bar-item {
-    background: var(--fog);
-    border-radius: 10px;
-    padding: 16px;
-    transition: transform 0.15s;
-  }
-  .skill-bar-item:hover { transform: translateY(-2px); }
-  .skill-bar-label { font-size: 0.82rem; font-weight: 600; color: var(--navy); margin-bottom: 10px; }
-  .skill-bar-track { height: 5px; background: rgba(18,115,123,0.12); border-radius: 3px; overflow: hidden; }
-  .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--teal-light)); border-radius: 3px; width: 0; transition: width 1s ease; }
-  .skill-bar-sublabel { font-size: 0.72rem; color: var(--muted); margin-top: 6px; }
+  .skills-panel.active { display: block; }
+  .skill-bar-item { margin-bottom: 28px; }
+  .skill-bar-label { font-size: 0.92rem; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .skill-bar-sublabel { font-size: 0.78rem; color: var(--muted); margin-top: 4px; }
+  .skill-bar-track { height: 6px; background: var(--fog); border-radius: 100px; overflow: hidden; }
+  .skill-bar-fill { height: 100%; background: linear-gradient(90deg, var(--blue), var(--blue-light)); border-radius: 100px; width: 0; transition: width 0.8s cubic-bezier(0.16,1,0.3,1); }
 
-  /* ── EDUCATION ── */
   #education { background: var(--cream); }
-  .edu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
-  .edu-card {
-    background: var(--white);
-    border-radius: 14px;
-    padding: 28px 32px;
-    border: 1px solid var(--border);
-    transition: box-shadow 0.2s;
-  }
-  .edu-card:hover { box-shadow: 0 6px 24px rgba(10,22,40,0.08); }
-  .edu-badge {
-    display: inline-block;
-    background: rgba(200,149,42,0.1);
-    border: 1px solid rgba(200,149,42,0.3);
-    border-radius: 6px;
-    font-size: 0.72rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase;
-    color: var(--gold); padding: 3px 10px; margin-bottom: 12px;
-  }
-  .edu-title { font-weight: 700; font-size: 1rem; color: var(--navy); margin-bottom: 4px; }
-  .edu-sub { font-size: 0.85rem; color: var(--muted); margin-bottom: 12px; }
-  .edu-detail { font-size: 0.85rem; color: #334155; line-height: 1.65; }
+  .edu-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .edu-card { background: var(--white); border-radius: 14px; padding: 28px 24px; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s; }
+  .edu-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+  .edu-badge { display: inline-block; font-size: 0.65rem; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; background: rgba(27,95,168,0.1); color: var(--blue); padding: 3px 10px; border-radius: 4px; margin-bottom: 14px; }
+  .edu-title { font-size: 0.97rem; font-weight: 700; color: var(--navy); margin-bottom: 6px; }
+  .edu-sub { font-size: 0.82rem; color: var(--muted); margin-bottom: 10px; }
+  .edu-detail { font-size: 0.82rem; color: #4A5568; line-height: 1.6; }
 
-  /* ── CONTACT ── */
-  #contact {
-    background: var(--navy);
+  /* VALUES SECTION */
+  #values { background: var(--navy); }
+  #values .section-title { color: var(--white); }
+  #values .section-sub { color: rgba(245,240,232,0.6); }
+  #values .section-label { color: #5BA3E8; }
+  .values-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .val-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(27,95,168,0.2); border-radius: 14px; padding: 28px 24px; transition: border-color 0.2s, background 0.2s, transform 0.2s; }
+  .val-card:hover { border-color: #5BA3E8; background: rgba(27,95,168,0.08); transform: translateY(-3px); }
+  .val-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; color: #5BA3E8; margin-bottom: 10px; }
+  .val-body { font-size: 0.87rem; color: rgba(245,240,232,0.65); line-height: 1.65; }
+
+  #contact { background: var(--white); text-align: center; }
+  .contact-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; margin-top: 40px; }
+  .contact-pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 24px; background: var(--fog); border-radius: 100px; font-size: 0.88rem; font-weight: 500; color: var(--navy); text-decoration: none; border: 1px solid var(--border); transition: border-color 0.2s, background 0.2s; }
+  .contact-pill:hover { border-color: var(--blue); background: rgba(27,95,168,0.05); }
+
+  footer { background: var(--navy); text-align: center; padding: 32px 48px; font-size: 0.8rem; color: rgba(245,240,232,0.3); letter-spacing: 0.05em; }
+
+  /* MCDERMOTT BANNER */
+  .mcd-banner {
+    background: linear-gradient(135deg, #1B5FA8 0%, #0A1628 100%);
+    padding: 48px;
     text-align: center;
-    padding: 96px 48px;
   }
-  #contact .section-label { color: var(--teal-light); }
-  #contact .section-title { color: var(--white); margin-bottom: 12px; }
-  #contact .section-sub { color: rgba(245,240,232,0.6); margin: 0 auto 48px; max-width: 480px; }
-  .contact-row { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
-  .contact-pill {
-    display: inline-flex; align-items: center; gap: 10px;
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(18,115,123,0.3);
-    border-radius: 100px;
-    padding: 12px 24px;
-    font-size: 0.9rem; color: rgba(245,240,232,0.8);
-    text-decoration: none;
-    transition: background 0.2s, border-color 0.2s;
-  }
-  .contact-pill:hover { background: rgba(18,115,123,0.15); border-color: var(--teal-light); color: var(--teal-light); }
-  .contact-pill svg { flex-shrink: 0; }
+  .mcd-banner p { color: rgba(255,255,255,0.75); font-size: 1rem; max-width: 620px; margin: 0 auto; line-height: 1.7; }
+  .mcd-banner strong { color: white; }
+  .mcd-role-tag { display: inline-block; background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 100px; padding: 8px 24px; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: white; margin-bottom: 20px; }
 
-  footer {
-    background: #060E1A;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.78rem;
-    color: rgba(245,240,232,0.25);
-    letter-spacing: 0.05em;
-  }
-
-  /* ── RESPONSIVE ── */
   @media (max-width: 900px) {
-    nav { padding: 14px 24px; }
-    #hero { grid-template-columns: 1fr; padding: 100px 24px 60px; gap: 48px; }
+    #hero { grid-template-columns: 1fr; }
     .hero-right { align-items: flex-start; }
-    section { padding: 72px 24px; }
-    .about-grid, .edu-grid { grid-template-columns: 1fr; }
-    .achievements-grid { grid-template-columns: 1fr 1fr; }
-    .nav-links { display: none; }
-  }
-  @media (max-width: 600px) {
-    .achievements-grid { grid-template-columns: 1fr; }
-    .skills-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .achievements-grid, .values-grid { grid-template-columns: 1fr 1fr; }
+    .edu-grid { grid-template-columns: 1fr 1fr; }
+    nav { padding: 16px 24px; }
+    .nav-links { gap: 16px; }
+    section { padding: 64px 24px; }
   }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
 <nav>
-  <div class="nav-logo">G<span>.</span>Varughese</div>
+  <div class="nav-logo">George <span>Varughese</span></div>
   <ul class="nav-links">
     <li><a href="#about">About</a></li>
     <li><a href="#experience">Experience</a></li>
     <li><a href="#achievements">Impact</a></li>
+    <li><a href="#values">Values</a></li>
     <li><a href="#skills">Skills</a></li>
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -422,62 +232,68 @@
   <div class="hero-bg-grid"></div>
   <div class="hero-bg-glow"></div>
   <div class="hero-left">
-    <div class="hero-tag">Available Immediately · Dubai, UAE</div>
+    <div class="hero-tag">Applying · Intern (IT) · McDermott International</div>
     <h1 class="hero-name">George<br/><em>Varughese</em></h1>
-    <p class="hero-role">Administration &amp; Operations · Project Support · Client Liaison</p>
-    <p class="hero-desc">A Computer Science graduate who spent the past year doing what most interns are still preparing for — running live government operations, coordinating across four countries, and rebuilding critical systems under real pressure.</p>
+    <p class="hero-role">Administration &amp; Operations · Project Support · Digital Tools · Dubai, UAE</p>
+    <p class="hero-desc">Computer Engineering graduate with professional experience supporting UAE government-sector clients, managing live operational systems, and delivering under real pressure — not classroom conditions. Bringing US engineering culture from an MIT-founded startup, and globally competitive credentials from McKinsey, Oxford, and Harvard.</p>
     <div class="hero-cta">
-      <a href="#experience" class="btn-primary">View Experience</a>
+      <a href="#experience" class="btn-primary">View My Experience</a>
       <a href="#contact" class="btn-ghost">Get In Touch</a>
     </div>
   </div>
   <div class="hero-right">
     <div class="stat-card">
-      <div class="stat-num">4</div>
-      <div class="stat-label">Countries worked across professionally</div>
-    </div>
-    <div class="stat-card">
-      <div class="stat-num">40%</div>
-      <div class="stat-label">Reporting overhead reduced for a government client</div>
-    </div>
-    <div class="stat-card">
       <div class="stat-num">500+</div>
-      <div class="stat-label">Active records rebuilt — zero errors, zero disruption</div>
+      <div class="stat-label">Live Government Records Managed</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">0</div>
+      <div class="stat-label">Downtime During Mission-Critical Remediation</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-num">3×</div>
+      <div class="stat-label">Global Competitive Programme Selections (2025)</div>
     </div>
     <div class="lang-bar">
       <div class="lang-bar-title">Languages</div>
       <div class="lang-item"><span class="lang-name">English</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div></div></div>
       <div class="lang-item"><span class="lang-name">Hindi</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div></div>
-      <div class="lang-item"><span class="lang-name">French</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div></div></div>
-      <div class="lang-item"><span class="lang-name">Arabic</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div></div>
       <div class="lang-item"><span class="lang-name">Malayalam</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div></div></div>
+      <div class="lang-item"><span class="lang-name">Arabic</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div><div class="dot"></div></div></div>
+      <div class="lang-item"><span class="lang-name">French</span><div class="lang-dots"><div class="dot active"></div><div class="dot active"></div><div class="dot active"></div><div class="dot"></div><div class="dot"></div></div></div>
     </div>
   </div>
 </section>
 
+<!-- MCDERMOTT BANNER -->
+<div class="mcd-banner">
+  <div class="mcd-role-tag">Intern (IT) · Dubai, Jebel Ali · McDermott International</div>
+  <p>McDermott operates across <strong>more than 50 countries</strong>, executing technically demanding energy infrastructure projects that require precision at every level — including from the people who support the operations group. I am applying because this environment is exactly where my profile — <strong>government-sector IT experience, US engineering culture, and globally verified analytical rigour</strong> — translates into immediate, measurable value.</p>
+</div>
+
 <!-- ABOUT -->
 <section id="about">
   <p class="section-label">Who I Am</p>
-  <h2 class="section-title">Built for High-Stakes<br/>Environments</h2>
+  <h2 class="section-title">Built for Complex,<br/>High-Stakes Environments</h2>
   <div class="about-grid">
     <div class="about-text">
-      <p>I graduated from IIIT Kottayam with a B.Tech in Computer Science in 2025, but by the time I crossed that stage, I had already spent a year doing the kind of work most graduates take years to reach. I was the <strong>primary operational contact for government clients across UAE and Saudi Arabia</strong>, not just writing code — coordinating multi-stakeholder timelines, managing live systems, and making judgment calls under genuine pressure.</p>
-      <p>My background combines <strong>technical depth with operational fluency</strong>. I can build and fix systems, but I can also explain them clearly to non-technical stakeholders, produce professional documentation that holds up to government scrutiny, and keep multiple workstreams moving without losing track of any of them.</p>
-      <p>I bring multilingual communication, genuine cross-cultural experience, and the professional discipline developed by working across teams in the <strong>UAE, Saudi Arabia, Sweden, and the United States</strong>. McDermott's scale and complexity is the exact environment where those capabilities translate into real value.</p>
+      <p>I graduated from IIIT Kottayam with a B.Tech in Computer Science in 2025, but by the time I crossed that stage, I had already spent a year doing the kind of work most graduates take years to reach: <strong>primary operational contact for UAE and Saudi government clients</strong>, managing live systems, coordinating multi-stakeholder timelines, and producing formal documentation reviewed by government departments.</p>
+      <p>My background combines <strong>technical depth with administrative and operational fluency</strong>. I can manage data, write systems documentation, coordinate projects, and communicate with precision across functions and seniority levels. I also bring something rare in this region: direct experience inside a <strong>US-headquartered, MIT-founded startup</strong> — the professional standards, documentation discipline, and ownership culture I absorbed there are the same culture McDermott's international project teams demand.</p>
+      <p>McDermott's scale — complex EPC projects, multi-site coordination, global operational standards — is precisely the environment I want to grow inside. <strong>The Jebel Ali operations</strong> in particular, as a coordination and field operations hub for major regional energy projects, is where I want to contribute from day one.</p>
     </div>
     <div>
       <p style="font-size:0.78rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);margin-bottom:16px;">Core Competencies</p>
       <div class="skills-grid">
-        <div class="skill-chip"><span class="chip-dot"></span>Multi-project coordination</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Government client liaison</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Administrative support</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Data entry &amp; analysis</div>
         <div class="skill-chip"><span class="chip-dot"></span>Technical documentation</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Data analysis & reporting</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Project coordination</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Government client liaison</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Meeting notes &amp; follow-up</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Multi-workstream tracking</div>
         <div class="skill-chip"><span class="chip-dot"></span>Stakeholder communication</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Cross-functional teamwork</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Scheduling & task tracking</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Incident response & recovery</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Process optimisation</div>
-        <div class="skill-chip"><span class="chip-dot"></span>Multilingual communication</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Research &amp; reporting</div>
+        <div class="skill-chip"><span class="chip-dot"></span>Cross-cultural fluency</div>
       </div>
     </div>
   </div>
@@ -487,7 +303,7 @@
 <section id="experience">
   <p class="section-label">Career Timeline</p>
   <h2 class="section-title">Experience That<br/>Speaks for Itself</h2>
-  <p class="section-sub">Every role has involved real accountability, real clients, and real consequences — not just learning exercises.</p>
+  <p class="section-sub">Every role has involved real accountability, real clients, and real consequences — not simulations or academic exercises.</p>
 
   <div class="timeline">
 
@@ -497,19 +313,19 @@
         <div class="tl-meta">
           <div>
             <div class="tl-company">Reach Group</div>
-            <div class="tl-role">Technical Staff Member — Field Operations &amp; Client Support · Dubai, UAE</div>
+            <div class="tl-role">IT Systems &amp; Infrastructure Engineer · Dubai, UAE</div>
           </div>
           <span class="tl-date">May 2025 – Present</span>
         </div>
         <ul class="tl-bullets">
-          <li>Primary operational support across multiple live government-sector accounts — scheduling, tracking deliverables, and keeping concurrent workstreams on time.</li>
-          <li>Conducted performance analysis across client sites; flagged anomalies and delivered clear written summaries that reduced reporting overhead by <strong>40%</strong> on one account.</li>
-          <li>Produced technical reports, support plans, and client-facing documentation reviewed directly by government departments.</li>
-          <li>Participated in regular client meetings — recording action points and following through on every commitment without exception.</li>
-          <li>Managed professional email and phone communication across UAE and Saudi Arabia, escalating issues through the correct channels with precision.</li>
+          <li>Primary coordination and support contact for UAE government-sector clients — managing support tickets, tracking concurrent deliverables, and ensuring stakeholder communication is precise and professional.</li>
+          <li>Conduct performance analysis across client sites; produce formal written reports reviewed and accepted by UAE government departments.</li>
+          <li>Administer SQL databases supporting 500+ active operational records — applying data validation, schema management, and integrity checks under live production conditions.</li>
+          <li>Produce technical SOPs, incident logs, data-flow diagrams, and handover documentation ensuring full repeatability of all system procedures.</li>
+          <li>Liaise directly with government agency stakeholders to gather requirements, translate technical complexity into clear communication, and follow through on every commitment made.</li>
         </ul>
         <div class="tl-tags">
-          <span class="tag">Operations</span><span class="tag">Client Management</span><span class="tag">Reporting</span><span class="tag">Documentation</span><span class="tag">UAE Gov Sector</span>
+          <span class="tag">Operations</span><span class="tag">Govt Clients</span><span class="tag">Documentation</span><span class="tag">Data Management</span><span class="tag">UAE</span>
         </div>
       </div>
     </div>
@@ -520,18 +336,18 @@
         <div class="tl-meta">
           <div>
             <div class="tl-company">Emdad Human Resources Company</div>
-            <div class="tl-role">Critical Systems Support Engineer · Riyadh, KSA (Remote)</div>
+            <div class="tl-role">IT Systems Support Engineer (Sole Technical Lead) · Riyadh, KSA (Remote)</div>
           </div>
           <span class="tl-date">Oct 2025 – Present</span>
         </div>
         <ul class="tl-bullets">
-          <li>Sole point of contact on a critical operational system failure — independently diagnosed the root cause and rebuilt the entire system from scratch with <strong>zero service disruption</strong>.</li>
-          <li>Analysed and reconstructed <strong>500+ active data records</strong> with complete accuracy within 6 weeks.</li>
-          <li>Produced comprehensive incident documentation, resolution procedures, and structured handover materials enabling the client team to self-maintain going forward.</li>
-          <li>Maintained proactive written and verbal communication with the Saudi operations team throughout, managing expectations and adapting based on feedback in real time.</li>
+          <li>Deployed as sole technical lead on a mission-critical government system failure — independently diagnosed root cause, rebuilt processing pipeline from scratch, reduced data error rate from 15% to under 2% within 6 weeks.</li>
+          <li>Maintained <strong>zero service disruption</strong> throughout full remediation of a live government operational system supporting 500+ employee records.</li>
+          <li>Produced comprehensive documentation package: incident report, root-cause analysis, SOPs, system architecture notes, and structured handover materials.</li>
+          <li>Coordinated professionally with Saudi IT operations team throughout — maintaining clear written communication and discretion on sensitive government system configurations.</li>
         </ul>
         <div class="tl-tags">
-          <span class="tag">Systems Recovery</span><span class="tag">Root Cause Analysis</span><span class="tag">Technical Docs</span><span class="tag">KSA Remote Ops</span>
+          <span class="tag">Systems Recovery</span><span class="tag">Root Cause Analysis</span><span class="tag">Technical Docs</span><span class="tag">KSA Gov</span><span class="tag">Remote Ops</span>
         </div>
       </div>
     </div>
@@ -541,18 +357,18 @@
       <div class="tl-card">
         <div class="tl-meta">
           <div>
-            <div class="tl-company">Maura (MIT-Founded Startup)</div>
-            <div class="tl-role">AI Systems Engineer · UAE (Hybrid)</div>
+            <div class="tl-company">Maura — MIT-Founded AI Startup (San Francisco, USA)</div>
+            <div class="tl-role">Technical Support Developer · UAE (Remote)</div>
           </div>
-          <span class="tl-date">Jun 2024 – Apr 2025</span>
+          <span class="tl-date">Aug 2023 – Jun 2024</span>
         </div>
         <ul class="tl-bullets">
-          <li>Contributed to project planning and delivery within a fast-paced US-headquartered startup — managing timelines and coordinating across time zones with colleagues in Sweden and the USA.</li>
-          <li>Conducted theoretical research and translated findings into deployed AI systems — demonstrating the ability to gather, synthesise, and present complex information usably.</li>
-          <li>Developed the professional communication standards and pace expected in a high-performance international organisation.</li>
+          <li>Operated inside a <strong>US-headquartered, MIT-founded startup</strong> — directly absorbing the professional standards, technical ownership, and documentation discipline of a high-performance American technology organisation.</li>
+          <li>Coordinated with international teams across UAE, Sweden, and the USA — managing timelines, tracking deliverables, and maintaining clear incident records across time zones.</li>
+          <li>Built production AI systems from first principles with no existing codebase or documentation, requiring complete self-direction and disciplined output at every stage.</li>
         </ul>
         <div class="tl-tags">
-          <span class="tag">AI/ML Systems</span><span class="tag">Research</span><span class="tag">Cross-timezone</span><span class="tag">Startup Pace</span>
+          <span class="tag">MIT-Founded</span><span class="tag">US Engineering Culture</span><span class="tag">Cross-timezone</span><span class="tag">AI/ML Systems</span>
         </div>
       </div>
     </div>
@@ -568,11 +384,10 @@
           <span class="tl-date">Jul 2023 – Dec 2023</span>
         </div>
         <ul class="tl-bullets">
-          <li>Collaborated with a US-based team across the full development lifecycle — contributing ideas, managing tasks, and coordinating across functions and time zones.</li>
-          <li>Managed direct customer-facing responsibilities during testing and deployment — handling feedback professionally and documenting issues clearly.</li>
+          <li>Collaborated with US-based team across the full development lifecycle — contributing ideas, managing tasks, coordinating across functions, and handling customer-facing communication professionally.</li>
         </ul>
         <div class="tl-tags">
-          <span class="tag">iOS Development</span><span class="tag">US Team</span><span class="tag">Client Facing</span>
+          <span class="tag">iOS Dev</span><span class="tag">US Team</span><span class="tag">Client Facing</span>
         </div>
       </div>
     </div>
@@ -584,25 +399,25 @@
 <section id="achievements">
   <p class="section-label">Measurable Impact</p>
   <h2 class="section-title">Numbers That<br/>Tell the Story</h2>
-  <p class="section-sub">Results from real environments, not hypotheticals.</p>
+  <p class="section-sub">Results from real government-sector environments, not hypotheticals.</p>
   <div class="achievements-grid">
     <div class="ach-card">
       <div class="ach-icon">📉</div>
       <div class="ach-num">40%</div>
       <div class="ach-title">Reporting Overhead Reduced</div>
-      <div class="ach-desc">Redesigned how performance data was gathered and presented for a UAE government client, cutting reporting time by 40%.</div>
+      <div class="ach-desc">Redesigned how performance data was gathered and presented for a UAE government client, cutting reporting overhead by 40%.</div>
     </div>
     <div class="ach-card">
       <div class="ach-icon">⚡</div>
       <div class="ach-num">7×</div>
-      <div class="ach-title">System Performance Improvement</div>
-      <div class="ach-desc">Contributed to a 7-times improvement in operational system performance for a live government account at Reach Group.</div>
+      <div class="ach-title">Data Accuracy Improvement</div>
+      <div class="ach-desc">Reduced government system data error rate from 15% to under 2% — a 7-times improvement — while maintaining zero downtime throughout.</div>
     </div>
     <div class="ach-card">
       <div class="ach-icon">🔒</div>
       <div class="ach-num">0</div>
-      <div class="ach-title">Errors on 500+ Record Rebuild</div>
-      <div class="ach-desc">Rebuilt a mission-critical system from scratch — 500+ active records, zero errors, zero service disruption, delivered in 6 weeks.</div>
+      <div class="ach-title">Downtime on 500+ Record Rebuild</div>
+      <div class="ach-desc">Rebuilt a mission-critical government system from scratch — 500+ active records, zero service disruption, delivered in 6 weeks.</div>
     </div>
     <div class="ach-card">
       <div class="ach-icon">🌍</div>
@@ -611,16 +426,49 @@
       <div class="ach-desc">Professional experience spanning UAE, Saudi Arabia, Sweden, and the USA — delivering in multicultural, cross-functional environments.</div>
     </div>
     <div class="ach-card">
-      <div class="ach-icon">🗣️</div>
-      <div class="ach-num">5</div>
-      <div class="ach-title">Languages Spoken</div>
-      <div class="ach-desc">English (fluent), Hindi &amp; French (proficient), Arabic (working), Malayalam (native) — a direct asset in UAE/KSA client environments.</div>
+      <div class="ach-icon">🏛️</div>
+      <div class="ach-num">3×</div>
+      <div class="ach-title">Globally Competitive Programme Selections</div>
+      <div class="ach-desc">McKinsey Forward Programme, Oxford ML Summer School (OxML 2025), and HPAIR Harvard Delegate — each selected from thousands of global applicants in 2025.</div>
     </div>
     <div class="ach-card">
-      <div class="ach-icon">🏛️</div>
-      <div class="ach-num">Gov</div>
-      <div class="ach-title">Government-Grade Standards</div>
-      <div class="ach-desc">All documentation, reports, and communications produced to a standard reviewed and accepted by UAE and Saudi government departments.</div>
+      <div class="ach-icon">🗣️</div>
+      <div class="ach-num">5</div>
+      <div class="ach-title">Languages</div>
+      <div class="ach-desc">English (fluent), Hindi (proficient), Malayalam (native), Arabic (working), French (proficient) — a direct asset in McDermott's international operations environment.</div>
+    </div>
+  </div>
+</section>
+
+<!-- VALUES ALIGNMENT -->
+<section id="values">
+  <p class="section-label">Culture Fit</p>
+  <h2 class="section-title">How I Live<br/>McDermott's Values</h2>
+  <p class="section-sub">McDermott's values are not new to me. They are values I have already been operating under — in government-sector environments where the standard is set by the client.</p>
+  <div class="values-grid">
+    <div class="val-card">
+      <div class="val-label">One Team, One Company</div>
+      <div class="val-body">At Reach Group, I coordinate across multiple concurrent government accounts, keeping colleagues aligned and every workstream moving. At Emdad, I documented every decision so the client team could self-maintain independently — putting continuity above individual credit.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-label">Safety</div>
+      <div class="val-body">In IT operations, safety means protecting the integrity of live systems and the accuracy of data that real people depend on. At Emdad, I maintained zero service disruption throughout a full system remediation — because cutting corners to move faster was never an option.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-label">Integrity</div>
+      <div class="val-body">At Emdad, I was handed a failing system with no documentation and no safety net. I diagnosed accurately, communicated transparently about what was wrong, and fixed the root cause — not the symptom. My post-incident documentation told the full story, including exactly what had failed.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-label">Quality</div>
+      <div class="val-body">Every report, SOP, and communication I produce at Reach Group is reviewed and accepted by UAE government departments. Quality is not a goal I reach for — it is the minimum I accept from myself. Government-grade documentation standards are the baseline I work from.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-label">Innovation</div>
+      <div class="val-body">Selected into the Oxford ML Summer School (OxML 2025) and the McKinsey Forward Programme — not for credentials, but because the analytical and cross-domain thinking those programmes select for is the kind of thinking I apply to every task I encounter, including administrative and coordination work.</div>
+    </div>
+    <div class="val-card">
+      <div class="val-label">Community &amp; Respect</div>
+      <div class="val-body">Professional experience across UAE, Saudi Arabia, Sweden, and the USA — and fluency in five languages — gives me genuine cross-cultural communication ability. I adapt to the environment without losing professionalism, and I hold every team I work in to a respectful and inclusive standard.</div>
     </div>
   </div>
 </section>
@@ -628,78 +476,84 @@
 <!-- SKILLS -->
 <section id="skills">
   <p class="section-label">Technical & Professional Skills</p>
-  <h2 class="section-title">Tools I Work With</h2>
+  <h2 class="section-title">Tools &amp; Capabilities</h2>
   <p class="section-sub">Across operations, technology, and communication — with a track record of learning new tools fast when the role demands it.</p>
 
   <div class="skills-tabs">
-    <button class="tab-btn active" data-tab="ops">Operations</button>
+    <button class="tab-btn active" data-tab="ops">Operations &amp; Admin</button>
     <button class="tab-btn" data-tab="tech">Technology</button>
     <button class="tab-btn" data-tab="comm">Communication</button>
   </div>
 
   <div class="skills-panel active" id="panel-ops">
-    <div class="skill-bar-item"><div class="skill-bar-label">Microsoft Office Suite</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div><div class="skill-bar-sublabel">Word · Excel · PowerPoint · Outlook</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Project Coordination</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div><div class="skill-bar-sublabel">Timelines · Deliverables · Multi-stakeholder</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">JIRA</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div><div class="skill-bar-sublabel">Task tracking · Sprint management</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Power BI</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div><div class="skill-bar-sublabel">Data visualisation · Reporting dashboards</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Technical Documentation</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div><div class="skill-bar-sublabel">Incident reports · SOPs · Handovers</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Data Entry & Analysis</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div><div class="skill-bar-sublabel">Accuracy · Anomaly detection · Summaries</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Microsoft Office Suite</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div><div class="skill-bar-sublabel">Word · Excel · PowerPoint · Outlook — advanced proficiency</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Project &amp; Task Coordination</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="92"></div></div><div class="skill-bar-sublabel">Multi-workstream tracking · Deliverable management · Timeline adherence</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">JIRA &amp; Ticketing Systems</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div><div class="skill-bar-sublabel">Task tracking · Sprint management · Escalation documentation</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Technical Documentation</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div><div class="skill-bar-sublabel">Government-reviewed SOPs · Incident reports · Handovers · Architecture diagrams</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Data Entry &amp; Analysis</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div><div class="skill-bar-sublabel">500+ live record management · Anomaly detection · Structured reporting</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Meeting &amp; Scheduling Support</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div><div class="skill-bar-sublabel">Action point tracking · Note-taking · Follow-through discipline</div></div>
   </div>
 
   <div class="skills-panel" id="panel-tech">
-    <div class="skill-bar-item"><div class="skill-bar-label">Python</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div><div class="skill-bar-sublabel">Scripting · Automation · Data</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">SQL</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div><div class="skill-bar-sublabel">Database queries · Data extraction</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">AWS Cloud</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div><div class="skill-bar-sublabel">Certified Cloud Practitioner · Infrastructure</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">REST APIs</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div><div class="skill-bar-sublabel">Integration · Consumption · Testing</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Git</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div><div class="skill-bar-sublabel">Version control · Collaboration</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Remote Tools</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div><div class="skill-bar-sublabel">AnyDesk · RDP · Cross-timezone ops</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Python</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div><div class="skill-bar-sublabel">Scripting · Automation · Data processing</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">SQL (MySQL / PostgreSQL / MSSQL)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div><div class="skill-bar-sublabel">Live database management · Query writing · Schema integrity · Data validation</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">AWS Cloud</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div><div class="skill-bar-sublabel">Certified Cloud Practitioner · EC2 · VPC · IAM · S3</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">REST APIs</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="82"></div></div><div class="skill-bar-sublabel">Integration · Consumption · Postman testing</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Git &amp; Version Control</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="85"></div></div><div class="skill-bar-sublabel">Collaborative development · Code review workflows</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Remote &amp; Support Tools</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div><div class="skill-bar-sublabel">AnyDesk · RDP · Cross-timezone operations support</div></div>
   </div>
 
   <div class="skills-panel" id="panel-comm">
-    <div class="skill-bar-item"><div class="skill-bar-label">English (Professional)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="100"></div></div><div class="skill-bar-sublabel">Fluent — written &amp; verbal</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Stakeholder Communication</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div><div class="skill-bar-sublabel">Govt clients · Non-technical translation</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Arabic (Working)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div><div class="skill-bar-sublabel">Professional working proficiency</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">French (Proficient)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div><div class="skill-bar-sublabel">University elective · Professional reading</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Cross-Cultural Fluency</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div><div class="skill-bar-sublabel">UAE · KSA · Sweden · USA environments</div></div>
-    <div class="skill-bar-item"><div class="skill-bar-label">Presentation & Reporting</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div><div class="skill-bar-sublabel">Executive summaries · Client decks</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">English (Professional Fluency)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="100"></div></div><div class="skill-bar-sublabel">Fluent — written &amp; verbal, government and corporate standard</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Stakeholder Communication</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="93"></div></div><div class="skill-bar-sublabel">Govt clients · Non-technical translation · Executive summary writing</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Arabic (Working Proficiency)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="60"></div></div><div class="skill-bar-sublabel">Professional working level — UAE client environment asset</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">French (Proficient)</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="78"></div></div><div class="skill-bar-sublabel">University elective · Professional reading and communication</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Cross-Cultural Fluency</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="95"></div></div><div class="skill-bar-sublabel">UAE · KSA · Sweden · USA environments — direct professional experience</div></div>
+    <div class="skill-bar-item"><div class="skill-bar-label">Presentation &amp; Reporting</div><div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div><div class="skill-bar-sublabel">Research synthesis · Executive summaries · Client decks · Structured findings</div></div>
   </div>
 </section>
 
 <!-- EDUCATION -->
 <section id="education">
-  <p class="section-label">Academic & Professional Training</p>
+  <p class="section-label">Academic &amp; Professional Training</p>
   <h2 class="section-title">Education &amp;<br/>Certifications</h2>
-  <p class="section-sub">A strong theoretical foundation — backed by credentials from Oxford, Harvard, AWS, and Meta.</p>
+  <p class="section-sub">A strong technical foundation — backed by globally competitive credentials from Oxford, Harvard, McKinsey, AWS, and Meta.</p>
   <div class="edu-grid">
     <div class="edu-card">
       <span class="edu-badge">Degree</span>
       <div class="edu-title">B.Tech, Computer Science &amp; Engineering</div>
       <div class="edu-sub">IIIT Kottayam · 2021–2025</div>
-      <div class="edu-detail">Coursework: Software Engineering · Networking · Data Analysis · AI/ML · Cybersecurity · Cryptography · Systems Architecture · French (Foreign Language Elective)</div>
+      <div class="edu-detail">Networking · System Administration · Databases · Software Engineering · AI/ML · Cybersecurity · Cryptography · Systems Architecture · French (Foreign Language)</div>
     </div>
     <div class="edu-card">
       <span class="edu-badge">Certification</span>
       <div class="edu-title">AWS Certified Cloud Practitioner</div>
       <div class="edu-sub">Amazon Web Services</div>
-      <div class="edu-detail">Foundational cloud certification covering core AWS services, architecture principles, pricing, and security — directly applicable to cloud infrastructure management and reporting tasks.</div>
+      <div class="edu-detail">Core AWS services, architecture principles, pricing, and security — directly applicable to cloud-integrated administrative and IT support environments.</div>
     </div>
     <div class="edu-card">
-      <span class="edu-badge">Programme</span>
-      <div class="edu-title">Oxford ML Summer School</div>
+      <span class="edu-badge">Programme · Globally Competitive</span>
+      <div class="edu-title">McKinsey Forward Programme</div>
+      <div class="edu-sub">McKinsey &amp; Company · 2025</div>
+      <div class="edu-detail">Global competitive selection — rigorous analytical problem-solving, structured decision frameworks, and operational thinking. Thousands of global applicants.</div>
+    </div>
+    <div class="edu-card">
+      <span class="edu-badge">Programme · Globally Competitive</span>
+      <div class="edu-title">Oxford ML Summer School (OxML 2025)</div>
       <div class="edu-sub">University of Oxford</div>
-      <div class="edu-detail">Competitive machine learning programme hosted by the University of Oxford — covering advanced ML concepts, research methodology, and applied AI systems development.</div>
+      <div class="edu-detail">Competitive ML programme at Oxford covering generative AI, advanced ML systems, and research methodology. Highly selective global intake.</div>
     </div>
     <div class="edu-card">
-      <span class="edu-badge">Programme</span>
-      <div class="edu-title">Harvard PAIR Global Leadership</div>
+      <span class="edu-badge">Programme · Globally Competitive</span>
+      <div class="edu-title">HPAIR Harvard Delegate</div>
       <div class="edu-sub">Harvard University</div>
-      <div class="edu-detail">Global leadership programme focused on cross-cultural collaboration, stakeholder communication, and responsible decision-making in international professional environments.</div>
+      <div class="edu-detail">Harvard College Project for Asian &amp; International Relations — cross-cultural leadership, stakeholder communication, and responsible decision-making in global professional environments. Selected from thousands globally.</div>
     </div>
     <div class="edu-card">
       <span class="edu-badge">Certification</span>
       <div class="edu-title">Meta Android Developer</div>
       <div class="edu-sub">Meta · Coursera</div>
-      <div class="edu-detail">Professional developer certification covering mobile application development, UI/UX principles, and deployment best practices — reinforcing the technical foundation applied across all engineering roles.</div>
+      <div class="edu-detail">Professional developer certification reinforcing the technical foundation applied across all engineering and administrative IT roles.</div>
     </div>
   </div>
 </section>
@@ -708,7 +562,7 @@
 <section id="contact">
   <p class="section-label">Get In Touch</p>
   <h2 class="section-title">Ready to Contribute<br/>from Day One</h2>
-  <p class="section-sub">Dubai-based, UAE residency visa holder, available immediately. Let's talk.</p>
+  <p class="section-sub" style="margin: 0 auto 0 auto; text-align:center;">Dubai-based · Valid UAE Residence Visa · UAE Driving License · Available for immediate start at Jebel Ali and all UAE sites.</p>
   <div class="contact-row">
     <a href="tel:+971509382514" class="contact-pill">
       <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.68A2 2 0 012 1h3a2 2 0 012 1.72c.13 1 .39 1.99.74 2.95a2 2 0 01-.45 2.11L6.1 9c1.28 2.4 3.5 4.62 5.9 5.9l1.22-1.22a2 2 0 012.11-.45c.96.35 1.95.61 2.95.74A2 2 0 0122 16.92z"/></svg>
@@ -726,11 +580,10 @@
 </section>
 
 <footer>
-  George Varughese · Intern Application — McDermott International, Ltd · March 2026
+  George Varughese · Intern (IT) Application — McDermott International, Ltd. · April 2026
 </footer>
 
 <script>
-  // Tab switching
   document.querySelectorAll('.tab-btn').forEach(btn => {
     btn.addEventListener('click', () => {
       document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
@@ -741,7 +594,6 @@
     });
   });
 
-  // Animate skill bars
   function animateBars() {
     document.querySelectorAll('.skills-panel.active .skill-bar-fill').forEach(bar => {
       bar.style.width = '0';
@@ -752,12 +604,9 @@
   }
   animateBars();
 
-  // Timeline scroll reveal
   const observer = new IntersectionObserver(entries => {
     entries.forEach((e, i) => {
-      if (e.isIntersecting) {
-        setTimeout(() => e.target.classList.add('visible'), i * 120);
-      }
+      if (e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i * 120);
     });
   }, { threshold: 0.15 });
   document.querySelectorAll('.tl-item').forEach(el => observer.observe(el));
